@@ -129,6 +129,52 @@ body.white-turn .new-game-button {
   /* Style de l'icône (facultatif) */
 }
 
+/* Styles pour le menu */
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f4e4bc;
+  text-align: center;
+}
+
+.menu-container h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.menu-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.menu-btn {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.menu-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-btn i {
+  font-size: 1.4rem;
+}
+
 
 #message {
   margin-top: 0.5rem;
