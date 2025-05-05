@@ -11,6 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     <i class="fas fa-robot"></i> Joueur vs IA
                 </button>
             </div>
+            <div class="copyright">
+                © 2025 - Tous droits réservés
+            </div>
         </div>
     `;
     document.body.innerHTML = menuHTML;

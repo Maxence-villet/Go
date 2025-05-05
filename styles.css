@@ -181,3 +181,13 @@ body.white-turn .new-game-button {
   font-size: 1.25rem;
   color: #333;
 }
+
+/* Styles pour le copyright */
+.copyright {
+  margin-top: 4rem;
+  color: #151515;
+  font-size: 0.9rem;
+  text-align: center;
+  width: 100%;
+  padding-top: 1rem;
+}
