@@ -1,0 +1,137 @@
+
+/* Style général de la page */
+body {
+  background-color: #f4e4bc; /* Fond beige clair pour un style bois */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.5s ease-in-out; /* Ajout de la transition */
+  position: relative; /* Important pour positionner les éléments enfants de manière absolue */
+}
+
+/* Conteneur du jeu */
+#game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Titre */
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Plateau de jeu */
+#board {
+  background-color: #f4e4bc; /* Fond beige clair */
+  position: relative;
+  border: 2px solid #000; /* Bordure noire pour délimiter le plateau */
+  box-sizing: content-box; /* Assure que la bordure n'augmente pas la taille du contenu */
+}
+
+/* Lignes du plateau */
+.grid-line {
+  position: absolute;
+  background-color: #000; /* Lignes noires */
+  z-index: 1;
+}
+
+.grid-line.horizontal {
+  height: 2px; /* Épaisseur des lignes */
+  width: 100%;
+  left: 0;
+}
+
+.grid-line.vertical {
+  width: 2px; /* Épaisseur des lignes */
+  height: 100%;
+  top: 0;
+}
+
+/* Pierres */
+.stone {
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-50%, -50%); /* Centrer les pierres sur les intersections */
+  z-index: 2;
+}
+
+.stone.black {
+  background-color: #000;
+}
+
+.stone.white {
+  background-color: #fff;
+  border: 1px solid #000;
+}
+
+/* Points hoshi */
+.hoshi {
+  position: absolute;
+  background-color: #000;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* Interface utilisateur */
+#ui {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Style du bouton "Nouvelle partie" */
+.new-game-button {
+  position: absolute; /* Positionnement absolu par rapport au body */
+  bottom: 30px; /* Augmentation de la distance du bas */
+  right: 30px; /* Augmentation de la distance de la droite */
+  border: none;
+  border-radius: 50%; /* Forme ronde */
+  width: 70px; /* Augmentation de la largeur */
+  height: 70px; /* Augmentation de la hauteur */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 2rem; /* Augmentation de la taille de l'icône */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Ombre légère pour le relief */
+  z-index: 10; /* Pour s'assurer qu'il est au-dessus des autres éléments */
+}
+
+/* Couleur du bouton quand le fond est noir */
+body.black-turn .new-game-button {
+  background-color: #333; /* Noir un peu plus clair que #151515 */
+  color: #fff;
+}
+
+/* Couleur du bouton quand le fond est blanc */
+body.white-turn .new-game-button {
+  background-color: #fff9ba; /* Blanc un peu plus foncé que #dddddd */
+  color: #333;
+}
+
+.new-game-button:hover {
+  opacity: 0.8; /* Légère opacité au survol */
+}
+
+.new-game-button i {
+  /* Style de l'icône (facultatif) */
+}
+
+
+#message {
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+  color: #333;
+}
