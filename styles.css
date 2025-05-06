@@ -191,3 +191,23 @@ body.white-turn .new-game-button {
   width: 100%;
   padding-top: 1rem;
 }
+
+#board {
+  touch-action: manipulation; /* Optimise la réactivité tactile */
+}
+
+/* Agrandissement de la zone cliquable sur mobile */
+@media (max-width: 768px) {
+  #board {
+      position: relative;
+  }
+  
+  #board::after {
+      content: '';
+      position: absolute;
+      top: -15px;
+      left: -15px;
+      right: -15px;
+      bottom: -15px;
+  }
+}

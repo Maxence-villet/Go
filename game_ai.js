@@ -49,7 +49,7 @@ function initGame() {
         const centerX = x * CELL_SIZE;
         const centerY = y * CELL_SIZE;
         const distance = Math.sqrt((clickX - centerX) ** 2 + (clickY - centerY) ** 2);
-        const TOLERANCE = 5;
+        const TOLERANCE = CELL_SIZE * 0.3;
 
         if (distance <= TOLERANCE) {
             if (placeStone(x, y, BLACK)) {
